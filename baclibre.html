@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="number/html; charset=UTF-8"><link rel="stylesheet" type="number/css" href="cid:css-9ef3983c-232a-4959-b582-4ccf871859f4@mhtml.blink" />
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>حساب النقط</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="shortcut icon" href="images.png" />
+  <meta charset="UTF-8">
+
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+ 
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="number/css" href="https://massarservice.men.gov.ma/waliye/ScriptsIntegration/assets/css/styles.css">
+  <link rel="stylesheet" type="number/css" href="https://massarservice.men.gov.ma/waliye/Content/plugins/notifications/pnotify.custom.min.css">
+  
+<style>
+
+.botona{
+background-color: #626462; /* Green */
+border: none;
+color: white;
+padding: 20px;
+padding-top: 8px;
+padding-bottom: 8px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;}
+
+.footer-dark ul a:hover {
+opacity:0.8;
+}
+
+@media (max-width:767px) {
+.footer-dark .item:not(.social) {
+  text-align:center;
+  padding-bottom:20px;
+}
+}
+
+.footer-dark .item.text {
+margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+.footer-dark .item.text {
+  margin-bottom:0;
+}
+}
+
+.lab {
+  width: 100%;
+  height: 90px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.natija {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+
+}
+.footer-dark .item.text p {
+opacity:0.6;
+margin-bottom:0;
+}
+
+.footer-dark .item.social {
+text-align:center;
+}
+
+@media (max-width:991px) {
+.footer-dark .item.social {
+  text-align:center;
+  margin-top:20px;
+}
+}
+
+.footer-dark .item.social > a {
+font-size:20px;
+width:36px;
+height:36px;
+line-height:36px;
+display:inline-block;
+text-align:center;
+border-radius:50%;
+box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+margin:0 8px;
+color:#fff;
+opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+opacity:0.9;
+}
+
+.footer-dark .copyright {
+text-align:center;
+padding-top:24px;
+opacity:0.3;
+font-size:13px;
+margin-bottom:0;
+}
+.copyright{
+position:fixed;
+bottom:0;
+background-color: rgb(238, 241, 193);
+color: black;
+}
+
+
+</style>
+  
+</head>
+<body class="Layout"  onload="awamil()">
+  <script src="lib.js"></script>
+
+
+              <div class="tab-content responsive">
+                <button onclick="mssh()" class="fa fa-eraser" id="mssh"
+                style="background-color: #626462; /* Green */
+                border: none;
+                color: white;
+                padding: 20px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px;}"
+                >مسح</button>
+                <select name="forma" style="background-color: #626462; /* Green */
+                border: none;
+                color: white;
+                padding: 20px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px;}" onchange="location = this.value;">
+                <option value="baclibre.html">باك ليبر اداب</option>
+                  <option value="index.html">المراقبة المستمرة</option>
+                  
+                  <option value="insaniya.html">باك ليبر علوم انسانية</option>
+                 </select>
+                
+                      <div class="tab-pane active" id="tab_cc">
+                          <div class="row">
+                              <div class="col-md-12" style="margin-top: 15px;">
+                                  <table class="table table-bordered grid-table">
+                                      <thead>
+                                          <tr>
+                                              <th>المادة</th>
+                                              
+                                              <th>النقطة</th>
+                                              <th>المعامل</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;"> الفرنسية </td>
+
+
+
+                                                          <td>
+                                                          <input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A1">                                                        
+                                                        </td>
+                                                          <td><input type="number"  value="4" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">العربية</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z1">
+                                                          </td>
+                                                          <td><input type="number"  value="4" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">الانجليزية</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E1">
+                                                          </td>
+                                                          <td><input type="number"  value="4" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">الفلسفة</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F1">
+                                                          </td>
+                                                          <td><input type="number"  value="3" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">الاجتماعيات</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R1">
+                                                          </td>
+                                                          <td><input type="number"  value="3" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                     
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">الرياضيات</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y1">
+                                                      </td>
+                                                          <td><input type="number"  value="1" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">التربية اسلامية</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q1">
+                                                          </td>
+                                                          <td><input type="number" value="2" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  <tr style="background:#fbfbfb;">
+                                                          <td rowspan="1" style="background:#fbfbfb;">التربية بدنية</td>
+
+
+
+                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S1">
+                                                            </td>
+                                                          <td><input type="number" value="1"  readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S5">
+                                                          </td>
+                                                      
+                                                  </tr>
+                                                  
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+               
+                      <div class="row" style="font-size: 17px;">
+                          <div class="col-md-12" style="border-top: 1px solid #f3f3f3;">
+                             <div class="lab"> <label style="margin-right:10%;width:100px;padding: 3px;">معدل الدورة</label>
+                              <input type="text"  id="natija" value="10" disabled style="display: inline-block"></div>
+                             <button onclick="dala()" class="botona">حساب</button><br>
+                             <!-- <button onclick="sav()" ondblclick="set()" class="botona">save</button> -->
+                          </div>
+                          <div id="storedName"> </div>
+                  <div class="tab-pane" id="tab_chart">
+                      <div class="row">
+                          <div style="width:800px;">
+                              <canvas id="chart" height="0" width="0" class="chartjs-render-monitor" style="display: block; height: 0px; width: 0px;"></canvas>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+          </div>
+      </div>
+  </div>
+</div>
+              </div>
+
+          </div>
+      </div>
+  </div> 
+  <br>
+    <footer>
+  
+            <p class="copyright" style="margin: 24px;"  > edited by:youssef kerouad © 2021</p>
+        </div>
+    </footer>
+
+ 
+
+</body></html>
