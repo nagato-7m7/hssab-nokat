@@ -131,55 +131,39 @@ color: black;
 </head>
 <body class="Layout"  onload="awamil()">
   <script src="lib.js"></script>
-
-
-              <div class="tab-content responsive">
-                <button onclick="mssh()" class="fa fa-eraser" id="mssh"
-                style="background-color: #626462; /* Green */
-                border: none;
-                color: white;
-                padding: 20px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;}"
-                >مسح</button>
-                <select name="forma" style="background-color: #626462; /* Green */
-                border: none;
-                color: white;
-                padding: 20px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;}" onchange="location = this.value;">
-                <option value="baclibre.html">باك ليبر اداب</option>
+  
+  <div class="main-container">
+      <header class="app-header">
+          <h1 class="app-title">حساب النقط - باك ليبر أداب</h1>
+          <p class="app-subtitle">نظام حساب المعدل للطلاب المغاربة</p>
+      </header>
+      
+      <nav class="nav-container">
+          <div class="nav-buttons">
+              <button onclick="mssh()" class="btn btn-danger" id="mssh">
+                  <i class="fa fa-eraser"></i>
+                  مسح
+              </button>
+              <select name="forma" class="select-modern" onchange="location = this.value;">
+                  <option value="baclibre.html" selected>باك ليبر اداب</option>
                   <option value="index.html">المراقبة المستمرة</option>
-                  
                   <option value="insaniya.html">باك ليبر علوم انسانية</option>
-                 </select>
+              </select>
+          </div>
+      </nav>
+      
+      <div class="tab-content responsive">
                 
                       <div class="tab-pane active" id="tab_cc">
-                          <div class="row">
-                              <div class="col-md-12" style="margin-top: 15px;">
-                                  <table class="table table-bordered grid-table">
-                                      <thead>
-                                          <tr>
-                                              <th>المادة</th>
-                                              
-                                              <th>النقطة</th>
-                                              <th>المعامل</th>
-                                          </tr>
-                                      </thead>
+                          <div class="table-container">
+                              <table class="table-modern">
+                                  <thead>
+                                      <tr>
+                                          <th>المادة</th>
+                                          <th>النقطة</th>
+                                          <th>المعامل</th>
+                                      </tr>
+                                  </thead>
                                       <tbody>
                                                   <tr style="background:#fbfbfb;">
                                                           <td rowspan="1" style="background:#fbfbfb;"> الفرنسية </td>
@@ -187,9 +171,9 @@ color: black;
 
 
                                                           <td>
-                                                          <input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A1">                                                        
+                                                          <input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="A1">                                                        
                                                         </td>
-                                                          <td><input type="number"  value="4" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A5">
+                                                          <td><input type="number"  value="4" readonly class="input-modern" min="1.0" max="20.0" required id="A5">
                                                           </td>
                                                       
                                                   </tr>
@@ -198,9 +182,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Z1">
                                                           </td>
-                                                          <td><input type="number"  value="4" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z5">
+                                                          <td><input type="number"  value="4" readonly class="input-modern" min="1.0" max="20.0" required id="Z5">
                                                           </td>
                                                       
                                                   </tr>
@@ -209,9 +193,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="E1">
                                                           </td>
-                                                          <td><input type="number"  value="4" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E5">
+                                                          <td><input type="number"  value="4" readonly class="input-modern" min="1.0" max="20.0" required id="E5">
                                                           </td>
                                                       
                                                   </tr>
@@ -220,9 +204,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="F1">
                                                           </td>
-                                                          <td><input type="number"  value="3" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F5">
+                                                          <td><input type="number"  value="3" readonly class="input-modern" min="1.0" max="20.0" required id="F5">
                                                           </td>
                                                       
                                                   </tr>
@@ -231,9 +215,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="R1">
                                                           </td>
-                                                          <td><input type="number"  value="3" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R5">
+                                                          <td><input type="number"  value="3" readonly class="input-modern" min="1.0" max="20.0" required id="R5">
                                                           </td>
                                                       
                                                   </tr>
@@ -243,9 +227,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Y1">
                                                       </td>
-                                                          <td><input type="number"  value="1" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y5">
+                                                          <td><input type="number"  value="1" readonly class="input-modern" min="1.0" max="20.0" required id="Y5">
                                                           </td>
                                                       
                                                   </tr>
@@ -254,9 +238,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Q1">
                                                           </td>
-                                                          <td><input type="number" value="2" readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q5">
+                                                          <td><input type="number" value="2" readonly class="input-modern" min="1.0" max="20.0" required id="Q5">
                                                           </td>
                                                       
                                                   </tr>
@@ -265,9 +249,9 @@ color: black;
 
 
 
-                                                          <td><input type="number" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S1">
+                                                          <td><input type="number" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="S1">
                                                             </td>
-                                                          <td><input type="number" value="1"  readonly onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S5">
+                                                          <td><input type="number" value="1"  readonly class="input-modern" min="1.0" max="20.0" required id="S5">
                                                           </td>
                                                       
                                                   </tr>
@@ -278,14 +262,15 @@ color: black;
                           </div>
                       </div>
                
-                      <div class="row" style="font-size: 17px;">
-                          <div class="col-md-12" style="border-top: 1px solid #f3f3f3;">
-                             <div class="lab"> <label style="margin-right:10%;width:100px;padding: 3px;">معدل الدورة</label>
-                              <input type="text"  id="natija" value="10" disabled style="display: inline-block"></div>
-                             <button onclick="dala()" class="botona">حساب</button><br>
-                             <!-- <button onclick="sav()" ondblclick="set()" class="botona">save</button> -->
-                          </div>
-                          <div id="storedName"> </div>
+                      <div class="results-container">
+                          <div class="results-label">معدل الدورة</div>
+                          <div class="results-value" id="natija">10.00</div>
+                          <button onclick="dala()" class="btn btn-success">
+                              <i class="fa fa-calculator"></i>
+                              حساب المعدل
+                          </button>
+                          <div id="storedName"></div>
+                      </div>
                   <div class="tab-pane" id="tab_chart">
                       <div class="row">
                           <div style="width:800px;">
@@ -309,12 +294,10 @@ color: black;
           </div>
       </div>
   </div> 
-  <br>
-    <footer>
-  
-            <p class="copyright" style="margin: 24px;"  > edited by:youssef kerouad © 2021</p>
-        </div>
-    </footer>
+      <footer class="footer-modern">
+          <p class="copyright">تم التطوير بواسطة: يوسف كرواد © 2021</p>
+      </footer>
+  </div>
 
  
 
