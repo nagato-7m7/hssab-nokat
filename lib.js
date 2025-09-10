@@ -1,21 +1,20 @@
-// function awamil(){
-//     if (window.localStorage.getItem("A5")) {
-//       A5.value = window.localStorage.getItem("A5");
-//       Z5.value = window.localStorage.getItem("Z5");
-//       E5.value = window.localStorage.getItem("E5");
-//       R5.value = window.localStorage.getItem("R5");
-     
-//       Y5.value = window.localStorage.getItem("Y5");
-//       Q5.value = window.localStorage.getItem("Q5");
-//       S5.value = window.localStorage.getItem("S5");
-      
-//       F5.value = window.localStorage.getItem("F5");
+function awamil(){
+    // Add fade-in animation to main container
+    document.querySelector('.main-container').classList.add('fade-in');
     
+    // Add slide-up animation to table
+    setTimeout(() => {
+        document.querySelector('.table-modern').classList.add('slide-up');
+    }, 200);
     
-//     }
-   
-  
-//     }
+    // Add slide-up animation to results container
+    setTimeout(() => {
+        document.querySelector('.results-container').classList.add('slide-up');
+    }, 400);
+    
+    // Initialize calculation
+    dala();
+}
   
   
       function dala(){
@@ -23,40 +22,62 @@
          for (var ii=0; ii < elements.length; ii++) {
          if (elements[ii].value == "") {
            elements[ii].value = "0";
-      
-         }}
-  
-  
-        //  window.localStorage.setItem("A5", A5.value);
-        //  window.localStorage.setItem("Z5", Z5.value);
-        //  window.localStorage.setItem("E5", E5.value);
-        //  window.localStorage.setItem("R5", R5.value);
+         }
          
-        //  window.localStorage.setItem("Y5", Y5.value);
-        //  window.localStorage.setItem("Q5", Q5.value);
-        //  window.localStorage.setItem("S5", S5.value);
-        
-        //  window.localStorage.setItem("F5", F5.value);
-  
-  
-  
+         // Validate input values
+         var value = parseFloat(elements[ii].value);
+         if (value < 0 || value > 20) {
+             elements[ii].classList.add('invalid');
+             elements[ii].classList.remove('valid');
+         } else {
+             elements[ii].classList.add('valid');
+             elements[ii].classList.remove('invalid');
+         }
+       }
+
   var natija=document.getElementById("natija");
-//   natija.value=((parseFloat(((parseFloat(A1.value)*4)))+parseFloat(((parseFloat(Z1.value)*4)))+parseFloat(((parseFloat(E1.value)*4)))+parseFloat(((parseFloat(R1.value)*4)))+parseFloat(((parseFloat(Y1.value)*3)))+parseFloat(((parseFloat(Q1.value)*3)))+parseFloat(((parseFloat(S1.value)*2)))+parseFloat(((parseFloat(F1.value)*1)))
-//   /22).toFixed(2)); }
-natija.value=(parseFloat(parseFloat(A1.value)*4+parseFloat(Z1.value)*4+parseFloat(E1.value)*4+parseFloat(R1.value)*3+parseFloat(Y1.value)*3+parseFloat(Q1.value)*1+parseFloat(S1.value)*2+parseFloat(F1.value)*1)/22).toFixed(2); }
+  var result = (parseFloat(parseFloat(A1.value)*4+parseFloat(Z1.value)*4+parseFloat(E1.value)*4+parseFloat(R1.value)*3+parseFloat(Y1.value)*3+parseFloat(Q1.value)*1+parseFloat(S1.value)*2+parseFloat(F1.value)*1)/22).toFixed(2);
+  
+  // Update display
+  natija.textContent = result;
+  
+  // Add grade level styling
+  natija.className = 'results-value';
+  if (result >= 16) {
+      natija.classList.add('grade-excellent');
+  } else if (result >= 14) {
+      natija.classList.add('grade-good');
+  } else if (result >= 12) {
+      natija.classList.add('grade-average');
+  } else {
+      natija.classList.add('grade-poor');
+  }
+
+  // Add visual feedback
+  natija.style.transform = 'scale(1.1)';
+  natija.classList.add('success-glow');
+  
+  setTimeout(() => {
+      natija.style.transform = 'scale(1)';
+      natija.classList.remove('success-glow');
+  }, 600);
+}
   
     function mssh(){
          var elements = document.getElementsByTagName("input");
     for (var ii=0; ii < elements.length; ii++) {
       if (elements[ii].value == "10") {
         elements[ii].value = "";
-        document.getElementById("mssh").innerHTML="3mr"
+        document.getElementById("mssh").innerHTML='<i class="fa fa-eraser"></i> إعادة تعبئة'
       }
       else if (elements[ii].value == "0" || elements[ii].value == "") {
         elements[ii].value = "10";
-        document.getElementById("mssh").innerHTML="mssh"
+        document.getElementById("mssh").innerHTML='<i class="fa fa-eraser"></i> مسح'
       }
-    }  } 
+    }
+    // Recalculate after clearing/filling
+    dala();
+  } 
   
     
     // console.log(window.localStorage.getItem("A5"));

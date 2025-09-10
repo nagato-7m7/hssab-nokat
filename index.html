@@ -133,57 +133,43 @@ color: black;
   </head>
   <body class="Layout" onload="awamil()">
     <script src="hsab.js"></script>
- 
-  
-                <div class="tab-content responsive">
-                  <button onclick="mssh()" class="fa fa-eraser" id="mssh"
-                  style="background-color: #626462; /* Green */
-                  border: none;
-                  color: white;
-                  padding: 20px;
-                  padding-top: 8px;
-                  padding-bottom: 8px;
-                  text-align: center;
-                  text-decoration: none;
-                  display: inline-block;
-                  font-size: 16px;
-                  margin: 4px 2px;
-                  cursor: pointer;
-                  border-radius: 12px;"
-                  >مسح</button> 
+    
+    <div class="main-container">
+        <header class="app-header">
+            <h1 class="app-title">حساب النقط</h1>
+            <p class="app-subtitle">نظام حساب المعدل للطلاب المغاربة</p>
+        </header>
+        
+        <nav class="nav-container">
+            <div class="nav-buttons">
+                <button onclick="mssh()" class="btn btn-danger" id="mssh">
+                    <i class="fa fa-eraser"></i>
+                    مسح
+                </button> 
 
-                  <select name="forma" style="background-color: #626462; /* Green */
-                border: none;
-                color: white;
-                padding: 20px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;}" onchange="location = this.value;">
-                  <option value="index.html">المراقبة المستمرة</option>
-                  <option value="baclibre.html">باك ليبر اداب</option>
-                  <option value="insaniya.html">باك ليبر علوم انسانية</option>
-                 </select>
+                <select name="forma" class="select-modern" onchange="location = this.value;">
+                    <option value="index.html">المراقبة المستمرة</option>
+                    <option value="baclibre.html">باك ليبر اداب</option>
+                    <option value="insaniya.html">باك ليبر علوم انسانية</option>
+                </select>
+            </div>
+        </nav>
+        
+        <div class="tab-content responsive">
                   
                         <div class="tab-pane active" id="tab_cc">
-                            <div class="row">
-                                <div class="col-md-12" style="margin-top: 15px;">
-                                    <table class="table table-bordered grid-table" style="background: url(bg_eleve.png);">
-                                        <thead>
-                                            <tr>
-                                                <th>المادة</th>
-                                                <th>الفرض الأول</th>
-                                                <th>الفرض الثاني</th>
-                                                <th>الفرض الثالث</th>
-                                                <th>الفرض الرابع</th>
-                                                <th>المعامل</th>
-                                            </tr>
-                                        </thead>
+                            <div class="table-container">
+                                <table class="table-modern">
+                                    <thead>
+                                        <tr>
+                                            <th>المادة</th>
+                                            <th>الفرض الأول</th>
+                                            <th>الفرض الثاني</th>
+                                            <th>الفرض الثالث</th>
+                                            <th>الفرض الرابع</th>
+                                            <th>المعامل</th>
+                                        </tr>
+                                    </thead>
                                         <tbody>
                                                     <tr style="background:#fbfbfb;">
                                                             <td rowspan="1" style="background:#fbfbfb;"> المواظبة و السلوك </td>
@@ -191,14 +177,14 @@ color: black;
   
   
                                                             <td>
-                                                            <input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A1">                                                        </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A2">
+                                                            <input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="A1">                                                        </td>
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="A2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="A3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="A4">
                                                             </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="A5">
+                                                            <td><input type="text" value="1" placeholder="المعامل" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="A5">
                                                             </td>
                                                         
                                                     </tr>
@@ -207,15 +193,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Z1">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Z2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Z3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Z4">
                                                               </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Z5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Z5">
                                                             </td>
                                                         
                                                     </tr>
@@ -224,15 +210,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="E1">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="E2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="E3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="E4">
                                                             </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="E5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="E5">
                                                             </td>
                                                         
                                                     </tr>
@@ -241,15 +227,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="F1">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="F2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="F3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="F4">
                                                             </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="F5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="F5">
                                                             </td>
                                                         
                                                     </tr>
@@ -258,15 +244,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="R1">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="R2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="R3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="R4">
                                                               </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="R5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="R5">
                                                             </td>
                                                         
                                                     </tr>
@@ -275,15 +261,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="T1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="T1">
                                                               </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="T2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="T2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="T3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="T3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="T4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="T4">
                                                             </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="T5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="T5">
                                                             </td>
                                                         
                                                     </tr>
@@ -292,15 +278,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Y1">
                                                         </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Y2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Y3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Y4">
                                                               </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Y5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Y5">
                                                             </td>
                                                         
                                                     </tr>
@@ -309,15 +295,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Q1">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Q2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Q3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Q4">
                                                               </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="Q5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="Q5">
                                                             </td>
                                                         
                                                     </tr>
@@ -326,15 +312,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="S1">
                                                               </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="S2">
                                                               </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="S3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="S4">
                                                               </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="S5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="S5">
                                                             </td>
                                                         
                                                     </tr>
@@ -343,15 +329,15 @@ color: black;
   
   
   
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="D1">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="D1">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="D2">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="D2">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="D3">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="D3">
                                                             </td>
-                                                            <td><input type="text" value="10" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="D4">
+                                                            <td><input type="text" value="10" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="D4">
                                                             </td>
-                                                            <td><input type="text" value="1" placeholder="KTB HNA" onkeyup="dala()" size="4" min="1.0" max="20.0" required id="D5">
+                                                            <td><input type="text" value="1" placeholder="النقطة" onkeyup="dala()" class="input-modern" min="1.0" max="20.0" required id="D5">
                                                             </td>
                                                         
                                                     </tr>
@@ -361,14 +347,15 @@ color: black;
                             </div>
                         </div>
                  
-                        <div class="row" style="font-size: 17px;">
-                            <div class="col-md-12" style="border-top: 1px solid #f3f3f3;">
-                               <div class="lab"> <label style="margin-right:10%;width:100px;padding: 3px;">معدل الدورة :</label>
-                                <input type="text"  id="natija" value="10" disabled style="display: inline-block"></div>
-                               <button onclick="dala()" class="botona">حساب</button><br>
-                               <!-- <button onclick="sav()" ondblclick="set()" class="botona">save</button> -->
-                            </div>
-                            <div id="storedName"> </div>
+                        <div class="results-container">
+                            <div class="results-label">معدل الدورة</div>
+                            <div class="results-value" id="natija">10.00</div>
+                            <button onclick="dala()" class="btn btn-success">
+                                <i class="fa fa-calculator"></i>
+                                حساب المعدل
+                            </button>
+                            <div id="storedName"></div>
+                        </div>
                     <div class="tab-pane" id="tab_chart">
                         <div class="row">
                             <div style="width:800px;">
@@ -392,12 +379,10 @@ color: black;
             </div>
         </div>
     </div> 
-    <br>
-      <footer>
-    
-              <p class="copyright" style="margin: 24px;"  > edited by:youssef kerouad © 2021</p>
-          </div>
-      </footer>
+        <footer class="footer-modern">
+            <p class="copyright">تم التطوير بواسطة: يوسف كرواد © 2021</p>
+        </footer>
+    </div>
 
    
  
